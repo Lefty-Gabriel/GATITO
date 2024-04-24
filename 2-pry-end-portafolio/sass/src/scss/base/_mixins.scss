@@ -1,0 +1,27 @@
+@use "variables" as b;
+
+
+
+@mixin cell {
+  
+    @media (max-width: 400px){ @content;}
+   
+        }   
+
+        @mixin tl {
+  
+            @media (max-width: 800px){ @content;}
+           
+                }   
+
+                @mixin lp {
+  
+                    @media (max-width: 1280px){ @content;}
+                   
+                        }
+
+@mixin colum ($colum, $separacion) {
+    display: grid;
+    grid-template-columns: repeat($colum,1fr);
+    gap: $separacion;                
+          }   
